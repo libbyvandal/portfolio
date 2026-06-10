@@ -267,7 +267,7 @@
     .built-list { display: flex; flex-direction: column; }
 
     .built-item {
-      display: grid; grid-template-columns: 80px 1fr 1fr;
+      display: grid; grid-template-columns: 1fr 1fr;
       gap: 40px; padding: 48px 0;
       border-bottom: 1px solid var(--border);
       align-items: start;
@@ -540,12 +540,27 @@
       #hero,.about-inner,.built-inner,.impact-inner,.work-inner,
       .gallery-inner,.resume-inner,.connect-inner,footer{padding-left:18px;padding-right:18px;}
       .built-item{grid-template-columns:1fr;gap:12px;}
+      .built-title{font-size:24px;}
       .cs-body{grid-template-columns:1fr;}
-      .cs-results{grid-template-columns:1fr 1fr;}
+      .cs-results{grid-template-columns:1fr 1fr; flex-wrap:wrap;}
       .masonry{columns:1;}
       .resume-top{flex-direction:column;gap:24px;align-items:flex-start;}
       .footer-inner{flex-direction:column;gap:20px;text-align:center;}
       .f-links{align-items:center;}
+      .label-xl{font-size:36px;}
+      .hero-name{font-size:56px;}
+      .hero-headline{font-size:48px;}
+      .section-title{font-size:30px;}
+      .connect-title{font-size:36px;}
+      .resume-title{font-size:36px;}
+      .ig-grid{grid-template-columns:repeat(2,1fr);}
+      .cs{padding:28px;}
+      .cs-results{gap:16px;}
+      .rstat+.rstat{border-left:none;padding-left:0;}
+      .irow{gap:8px;}
+      .i-num{font-size:48px;}
+      .expertise-grid{gap:8px;}
+      .hero-cta-row{flex-wrap:wrap;}
     }
   </style>
 </head>
@@ -560,6 +575,7 @@
     <li><a href="#impact">Impact</a></li>
     <li><a href="#work">Case Studies</a></li>
     <li><a href="#resume">Resume</a></li>
+    <li><a href="#ooo">OOO</a></li>
     <li><a href="#connect" class="nav-cta">Let's Talk →</a></li>
   </ul>
 </nav>
@@ -862,8 +878,7 @@
   <div class="resume-inner">
     <div class="resume-top">
       <div>
-        <div class="label impact-label fu">Resume</div>
-        <div class="resume-title fu d1">Experience &<br><em>Expertise</em></div>
+        <div class="label-xl fu" style="color:var(--white);">Resume</div>
       </div>
       <a href="Elizabeth Vandal Resume.pdf" download="Elizabeth Vandal Resume.pdf" class="dl-btn fu d1">↓ Download Resume</a>
     </div>
