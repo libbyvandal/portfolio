@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Libby Vandal — Field & Experiential Marketing</title>
+  <meta name="description" content="Field marketer with 4+ years building ambassador programs, community initiatives, and experiential campaigns that turn grassroots engagement into measurable growth.">
+  <meta property="og:title" content="Libby Vandal — Field & Experiential Marketing">
+  <meta property="og:description" content="Field marketer with 4+ years building ambassador programs, community initiatives, and experiential campaigns that turn grassroots engagement into measurable growth.">
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://libbyvandal.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="og-image.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --dark:      #0A0A0A;
+      --accent:    #2B7FE8;
+      --accent-dk: #1A60D0;
+      --cream:     #FFFFFF;
+      --white:     #FFFFFF;
+      --border:    #E8E8E8;
+      --muted:     #888;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ─────────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0 48px; height: 60px;
+      background: var(--cream);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow .3s;
+    }
+    nav.scrolled {
+      box-shadow: 0 2px 20px rgba(0,0,0,.07);
+    }
+    .nav-logo {
+      font-size: 13px; font-weight: 800; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--dark); text-decoration: none;
+      flex-shrink: 0;
+    }
+    .nav-links { display: flex; gap: 4px; list-style: none; align-items: center; }
+    .nav-links a {
+      font-size: 11px; font-weight: 600; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--dark);
+      text-decoration: none; opacity: .45; transition: opacity .2s;
+      padding: 6px 12px; border-radius: 6px;
+    }
+    .nav-links a:hover { opacity: 1; background: var(--border); }
+    .nav-links a.active { opacity: 1; }
+    .nav-cta {
+      background: var(--dark) !important; color: var(--cream) !important;
+      opacity: 1 !important; padding: 8px 18px !important;
+      border-radius: 100px; margin-left: 8px;
+    }
+    .nav-cta:hover { background: #333 !important; }
+
+    /* ── HERO ────────────────────────────────────────────── */
+    #hero {
+      padding: 80px 48px 80px;
+      max-width: 1200px; margin: 0 auto;
+    }
+
+    .hero-top {
+      display: flex; justify-content: space-between;
+      align-items: flex-start; margin-bottom: 60px;
+      gap: 40px;
+    }
+
+    .hero-name-block {}
+
+    .hero-name {
+      font-size: clamp(48px, 7vw, 96px);
+      font-weight: 900; letter-spacing: -.04em;
+      line-height: .95; text-transform: uppercase;
+      color: var(--dark); margin-bottom: 16px;
+    }
+
+    .hero-descriptor {
+      font-size: 12px; font-weight: 700; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .hero-tags {
+      display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 28px;
+    }
+    .hero-tag {
+      font-size: 10px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .hero-tag + .hero-tag::before {
+      content: '·'; margin-right: 6px; color: var(--border);
+    }
+
+    .hero-photo-sm {
+      width: 220px; flex-shrink: 0;
+      aspect-ratio: 3/4; border-radius: 14px;
+      overflow: hidden; background: #ddd;
+    }
+    .hero-photo-sm img { width:100%; height:100%; object-fit:cover; display:block; }
+    .ph-sm {
+      width:100%; height:100%;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      background: linear-gradient(145deg,#1e2626,#0f1110);
+      color:rgba(255,255,255,.25); font-size:11px;
+      letter-spacing:.1em; text-transform:uppercase; gap:8px;
+    }
+
+    .hero-cta-row { display: flex; gap: 12px; align-items: center; }
+    .btn-hero {
+      background: var(--dark); color: var(--cream);
+      padding: 12px 26px; border-radius: 100px;
+      font-size: 12px; font-weight: 700; letter-spacing: .06em;
+      text-transform: uppercase; text-decoration: none;
+      transition: background .2s, transform .2s;
+      border: 1.5px solid var(--dark);
+    }
+    .btn-hero:hover { background: var(--accent); border-color: var(--accent); color: var(--white); transform: translateY(-2px); }
+    .btn-dark {
+      background: var(--dark); color: var(--cream);
+      padding: 12px 26px; border-radius: 100px;
+      font-size: 12px; font-weight: 700; letter-spacing: .06em;
+      text-transform: uppercase; text-decoration: none;
+      transition: transform .2s;
+    }
+    .btn-dark:hover { transform: translateY(-2px); }
+    .btn-outline {
+      border: 1.5px solid var(--border); color: var(--dark);
+      padding: 12px 24px; border-radius: 100px;
+      font-size: 12px; font-weight: 700; letter-spacing: .06em;
+      text-transform: uppercase; text-decoration: none;
+      transition: border-color .2s;
+    }
+    .btn-outline:hover { border-color: var(--dark); }
+
+    /* Big headline */
+    .hero-headline {
+      font-size: clamp(52px, 9vw, 130px);
+      font-weight: 900; line-height: .96;
+      letter-spacing: -.04em; text-transform: uppercase;
+      color: var(--dark);
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+    .hero-headline em {
+      font-style: italic; font-family: 'DM Serif Display', serif;
+      text-transform: none; letter-spacing: -.02em;
+    }
+
+    /* ── TICKER ──────────────────────────────────────────── */
+    .ticker-bar {
+      overflow: hidden; white-space: nowrap;
+      padding: 14px 0; margin: 60px 0 0;
+    }
+    .ticker-bar.dk { background: var(--dark); }
+    .ticker-bar.lt {
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .ticker-track { display: inline-block; animation: roll 24s linear infinite; }
+    .ticker-item {
+      display: inline-block; padding: 0 24px;
+      font-size: 11px; font-weight: 700; letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .dk .ticker-item { color: rgba(255,255,255,.5); }
+    .lt .ticker-item { color: rgba(0,0,0,.25); }
+    .ticker-item::after { content: '✦'; margin-left: 24px; }
+    @keyframes roll { to { transform: translateX(-50%); } }
+
+    /* ── SHARED SECTION STYLES ───────────────────────────── */
+    .section { padding: 100px 48px; max-width: 1200px; margin: 0 auto; }
+    .section-full { padding: 100px 48px; }
+
+    .label {
+      font-size: 10px; font-weight: 700; letter-spacing: .22em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 40px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .label::before { content:''; width:28px; height:1.5px; background:var(--accent); flex-shrink:0; }
+    /* ── EXPERTISE ───────────────────────────────────────── */
+    #expertise { background: var(--dark); padding: 100px 48px; }
+    .expertise-inner { max-width: 1200px; margin: 0 auto; }
+    .expertise-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+    }
+    .expertise-item {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      font-size: 18px; font-weight: 600; color: var(--white);
+      letter-spacing: -.01em;
+    }
+    .expertise-item:nth-child(odd) { padding-right: 40px; }
+    .expertise-item:nth-child(even) { padding-left: 40px; border-left: 1px solid rgba(255,255,255,.1); }
+
+    .label-xl {
+      font-size: clamp(48px, 7vw, 100px);
+      font-weight: 900; letter-spacing: -.04em; line-height: .95;
+      text-transform: uppercase; color: var(--dark);
+      margin-bottom: 48px; display: block;
+    }
+
+    .section-title {
+      font-size: clamp(36px, 5vw, 72px);
+      font-weight: 900; letter-spacing: -.04em;
+      line-height: .97; text-transform: uppercase;
+      margin-bottom: 60px;
+    }
+    .section-title em {
+      font-style: italic; font-family: 'DM Serif Display', serif;
+      text-transform: none;
+    }
+
+    /* ── ABOUT ───────────────────────────────────────────── */
+    #about { background: var(--white); }
+    .about-inner { max-width: 1200px; margin: 0 auto; padding: 100px 48px; }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr;
+      gap: 60px; align-items: start; max-width: 780px;
+    }
+    .about-text p {
+      font-size: 18px; line-height: 1.75; color: #444;
+      margin-bottom: 24px;
+    }
+    .about-text p:last-child { margin-bottom: 0; }
+    .about-right {}
+    .about-photo {
+      width: 100%; aspect-ratio: 4/5;
+      border-radius: 18px; overflow: hidden; background: var(--cream);
+      margin-bottom: 32px;
+    }
+    .about-photo img { width:100%; height:100%; object-fit:cover; display:block; }
+    .ph-photo {
+      width:100%; height:100%;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      background: linear-gradient(145deg,#e8e4dc,#d4d0c8);
+      color:#bbb; gap:8px;
+    }
+    .about-vals { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .aval {
+      padding: 18px 20px; background: var(--cream);
+      border-radius: 12px; border-left: 2px solid var(--accent);
+    }
+    .aval strong {
+      display: block; font-size: 11px; font-weight: 700;
+      letter-spacing: .08em; text-transform: uppercase;
+      margin-bottom: 5px; color: var(--dark);
+    }
+    .aval p { font-size: 13px; color: #888; line-height: 1.5; }
+
+    /* ── WHAT I'VE BUILT ─────────────────────────────────── */
+    #built { background: var(--cream); }
+    .built-inner { max-width: 1200px; margin: 0 auto; padding: 100px 48px; }
+
+    .built-list { display: flex; flex-direction: column; }
+
+    .built-item {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 40px; padding: 48px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+      transition: background .2s;
+    }
+    .built-item:first-child { border-top: 1px solid var(--border); }
+
+    .built-num {
+      font-size: 13px; font-weight: 700; letter-spacing: .08em;
+      color: var(--border); padding-top: 4px;
+    }
+
+    .built-title {
+      font-size: clamp(28px, 3.5vw, 48px);
+      font-weight: 900; letter-spacing: -.03em;
+      color: var(--dark); line-height: 1.05;
+    }
+
+    .built-desc {
+      font-size: 13px; line-height: 1.7; color: #888; margin-top: 12px;
+    }
+
+    .built-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+    .bchip {
+      font-size: 10px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; padding: 4px 10px; border-radius: 100px;
+      background: var(--white); color: #888; border: 1px solid var(--border);
+    }
+
+    /* ── IMPACT ──────────────────────────────────────────── */
+    #impact { background: var(--dark); }
+    .impact-inner { max-width: 1200px; margin: 0 auto; padding: 100px 48px; }
+    .impact-label { color: var(--accent) !important; }
+
+    .impact-stats { display: flex; flex-direction: column; }
+
+    .irow {
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; padding: 48px 0;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      gap: 40px;
+    }
+    .irow:first-child { border-top: 1px solid rgba(255,255,255,.07); }
+
+    .i-num {
+      font-size: clamp(60px, 8vw, 110px);
+      font-weight: 900; letter-spacing: -.05em;
+      color: var(--white); line-height: 1;
+    }
+    .i-num span { color: var(--accent); }
+
+    .i-desc {}
+    .i-label {
+      font-size: 18px; font-weight: 700; color: rgba(255,255,255,.9);
+      margin-bottom: 8px; letter-spacing: -.01em;
+    }
+    .i-note { font-size: 14px; color: rgba(255,255,255,.3); }
+
+    /* ── FEATURED WORK ───────────────────────────────────── */
+    #work { background: var(--white); }
+    .work-inner { max-width: 1200px; margin: 0 auto; padding: 100px 48px; }
+
+    .cs-list { display: flex; flex-direction: column; gap: 2px; }
+
+    .cs {
+      background: var(--white); border-radius: 16px;
+      padding: 56px; transition: box-shadow .25s;
+      border: 2px solid var(--dark);
+      margin-bottom: 16px;
+    }
+    .cs:hover { box-shadow: 6px 6px 0px var(--dark); }
+
+    .cs-top {
+      margin-bottom: 40px;
+    }
+    .cs-num {
+      font-size: 13px; font-weight: 700; letter-spacing: .08em;
+      color: var(--border); padding-top: 6px;
+    }
+    .cs-head {}
+    .cs-cat {
+      font-size: 10px; font-weight: 700; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
+    }
+    .cs-title {
+      font-size: clamp(20px, 2.5vw, 32px);
+      font-weight: 800; letter-spacing: -.02em;
+      color: var(--dark); line-height: 1.2;
+    }
+
+    .cs-body {
+      display: grid; grid-template-columns: repeat(4,1fr);
+      gap: 32px; margin-bottom: 32px;
+    }
+    .cs-detail h4 {
+      font-size: 12px; font-weight: 800; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--dark); margin-bottom: 10px;
+    }
+    .cs-detail p { font-size: 14px; line-height: 1.7; color: #555; }
+
+    .cs-results {
+      margin-left: 92px;
+      display: flex; gap: 0;
+      border-top: 1px solid var(--border);
+      padding-top: 32px; margin-top: 8px;
+    }
+    .rstat { flex: 1; padding-right: 24px; }
+    .rstat + .rstat { padding-left: 24px; border-left: 1px solid var(--border); padding-right: 24px; }
+    .rn { font-size: clamp(30px, 3.5vw, 48px); font-weight: 900; color: var(--accent); letter-spacing: -.03em; line-height: 1; }
+    .rl { font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #aaa; margin-top: 8px; }
+
+    /* ── GALLERY ─────────────────────────────────────────── */
+    #gallery { background: var(--dark); }
+    .gallery-inner { max-width: 1200px; margin: 0 auto; padding: 100px 48px; }
+    .gallery-hdr { margin-bottom: 48px; }
+    .ig-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+    }
+    .gitem {
+      position: relative; cursor: pointer;
+      aspect-ratio: 1/1; overflow: hidden;
+    }
+    .gitem-inner { width:100%; height:100%; transition: transform .4s; }
+    .gitem:hover .gitem-inner { transform: scale(1.05); }
+    .gitem img { width:100%; height:100%; object-fit:cover; display:block; }
+    .gph {
+      width:100%; height:100%;
+      display:flex; flex-direction:column;
+      align-items:center; justify-content:center;
+      text-align:center; padding:20px; gap:6px;
+      font-size:11px; letter-spacing:.1em;
+      text-transform:uppercase; color:rgba(255,255,255,.2);
+    }
+    .goverlay {
+      position:absolute; inset:0;
+      background: linear-gradient(to top,rgba(0,0,0,.75) 0%,transparent 60%);
+      opacity:0; transition:opacity .3s;
+      display:flex; flex-direction:column; justify-content:flex-end; padding:18px;
+    }
+    .gitem:hover .goverlay { opacity:1; }
+    .goverlay h4 { color:#fff; font-size:14px; font-weight:700; margin-bottom:3px; }
+    .goverlay p  { color:rgba(255,255,255,.55); font-size:11px; }
+
+    /* ── RESUME ──────────────────────────────────────────── */
+    #resume { background: var(--dark); }
+    .resume-inner { max-width: 1200px; margin: 0 auto; padding: 100px 48px; }
+
+    .resume-top {
+      display: flex; justify-content: space-between;
+      align-items: flex-end; margin-bottom: 80px;
+    }
+    .resume-title {
+      font-size: clamp(36px, 5vw, 72px);
+      font-weight: 900; letter-spacing: -.04em;
+      text-transform: uppercase; color: var(--white); line-height: .97;
+    }
+    .resume-title em { font-style: italic; font-family: 'DM Serif Display', serif; text-transform: none; color: var(--accent); }
+
+    .dl-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--accent); color: var(--white);
+      padding: 14px 28px; border-radius: 100px;
+      font-size: 12px; font-weight: 800; letter-spacing: .08em;
+      text-transform: uppercase; text-decoration: none;
+      transition: transform .2s, background .2s; white-space: nowrap;
+    }
+    .dl-btn:hover { transform: translateY(-2px); background: #1A60D0; }
+
+    .resume-cols { display: grid; grid-template-columns: 1fr; max-width: 780px; }
+
+    .rs-label {
+      font-size: 16px; font-weight: 800; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--accent);
+      padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,.1);
+      margin-bottom: 36px;
+    }
+
+    .exp-item { margin-bottom: 44px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,.06); }
+    .exp-item:last-child { border-bottom:none; }
+    .exp-top { display:flex; justify-content:space-between; margin-bottom:5px; }
+    .exp-role { font-size: 17px; font-weight: 700; color: var(--white); }
+    .exp-date { font-size: 12px; font-weight: 600; color: var(--accent); }
+    .exp-co { font-size: 13px; color: rgba(255,255,255,.35); margin-bottom: 16px; }
+    .exp-list { list-style: none; }
+    .exp-list li {
+      font-size: 14px; line-height: 1.7; color: rgba(255,255,255,.45);
+      padding-left: 18px; position: relative; margin-bottom: 8px;
+    }
+    .exp-list li::before { content:'→'; position:absolute; left:0; color:var(--accent); font-size:11px; top:2px; }
+
+    .sk-group { margin-bottom: 32px; }
+    .sk-group h4 {
+      font-size: 9px; font-weight: 700; letter-spacing: .18em;
+      text-transform: uppercase; color: rgba(255,255,255,.2); margin-bottom: 12px;
+    }
+    .sk-chips { display:flex; flex-wrap:wrap; gap:7px; }
+    .sk-chip {
+      font-size: 12px; font-weight: 500;
+      padding: 6px 14px; border-radius: 100px;
+      background: rgba(255,255,255,.07); color: rgba(255,255,255,.5);
+      border: 1px solid rgba(255,255,255,.1);
+    }
+
+    /* ── CONNECT ─────────────────────────────────────────── */
+    #connect { background: var(--dark); }
+    .connect-inner {
+      max-width: 1200px; margin: 0 auto; padding: 100px 48px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+    }
+    .connect-title {
+      font-size: clamp(40px, 6vw, 80px);
+      font-weight: 900; letter-spacing: -.04em;
+      text-transform: uppercase; line-height: .97; color: var(--white);
+    }
+    .connect-title em {
+      font-style: italic; font-family: 'DM Serif Display', serif; text-transform: none;
+    }
+    .connect-right {}
+    .connect-sub { font-size: 17px; color: rgba(255,255,255,.55); line-height: 1.72; margin-bottom: 36px; }
+    .connect-ctas { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:28px; }
+    .connect-detail { font-size: 13px; color: rgba(255,255,255,.35); }
+    .connect-detail a { color: rgba(255,255,255,.7); font-weight:600; text-decoration:none; }
+    .connect-detail a:hover { color: var(--accent); }
+
+    /* ── FOOTER ──────────────────────────────────────────── */
+    footer {
+      background: #070708; padding: 44px 48px;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .f-name { font-size: 16px; font-weight: 900; color: var(--white); letter-spacing: -.01em; }
+    .f-tag  { font-size: 11px; color: rgba(255,255,255,.25); margin-top: 3px; }
+    .f-script {
+      font-family: 'DM Serif Display', serif; font-style: italic;
+      font-size: 20px; color: rgba(43,127,232,.45);
+    }
+    .f-links { display:flex; flex-direction:column; gap:5px; align-items:flex-end; }
+    .f-links a { font-size:12px; color:rgba(255,255,255,.35); text-decoration:none; transition:color .2s; }
+    .f-links a:hover { color:var(--accent); }
+
+    /* ── ANIMATIONS ──────────────────────────────────────── */
+    .fu { opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease; }
+    .fu.on { opacity:1; transform:translateY(0); }
+    .d1{transition-delay:.1s} .d2{transition-delay:.2s} .d3{transition-delay:.3s} .d4{transition-delay:.4s}
+
+    /* ── RESPONSIVE ──────────────────────────────────────── */
+    @media(max-width:1024px){
+      nav,nav.scrolled{padding-left:28px;padding-right:28px;}
+      #hero,.section,.section-full,.about-inner,.built-inner,.impact-inner,
+      .work-inner,.gallery-inner,.resume-inner,.connect-inner{padding-left:28px;padding-right:28px;}
+      .about-grid,.connect-inner{grid-template-columns:1fr;gap:48px;}
+      .cs-body{grid-template-columns:1fr 1fr;margin-left:0;}
+      .cs-results{margin-left:0;}
+      .built-item{grid-template-columns:60px 1fr;gap:24px;}
+      .built-desc{grid-column:2;}
+      .resume-cols{grid-template-columns:1fr;gap:48px;}
+      .irow{grid-template-columns:1fr;}
+      .masonry{columns:2;}
+      .hero-top{flex-direction:column;}
+      .hero-photo-sm{width:100%;aspect-ratio:16/9;}
+    }
+    @media(max-width:680px){
+      nav{padding:16px 18px;} nav.scrolled{padding:12px 18px;} .nav-links{display:none;}
+      #hero,.about-inner,.built-inner,.impact-inner,.work-inner,
+      .gallery-inner,.resume-inner,.connect-inner,footer{padding-left:18px;padding-right:18px;}
+      .built-item{grid-template-columns:1fr;gap:12px;}
+      .built-title{font-size:24px;}
+      .cs-body{grid-template-columns:1fr;}
+      .cs-results{grid-template-columns:1fr 1fr; flex-wrap:wrap;}
+      .masonry{columns:1;}
+      .resume-top{flex-direction:column;gap:24px;align-items:flex-start;}
+      .footer-inner{flex-direction:column;gap:20px;text-align:center;}
+      .f-links{align-items:center;}
+      .label-xl{font-size:36px;}
+      .hero-name{font-size:56px;}
+      .hero-headline{font-size:48px;}
+      .section-title{font-size:30px;}
+      .connect-title{font-size:36px;}
+      .resume-title{font-size:36px;}
+      .ig-grid{grid-template-columns:repeat(2,1fr);}
+      .cs{padding:28px;}
+      .cs-results{gap:16px;}
+      .rstat+.rstat{border-left:none;padding-left:0;}
+      .irow{gap:8px;}
+      .i-num{font-size:48px;}
+      .expertise-grid{gap:8px;}
+      .hero-cta-row{flex-wrap:wrap;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a class="nav-logo" href="#">Libby Vandal</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#built">Work</a></li>
+    <li><a href="#impact">Impact</a></li>
+    <li><a href="#work">Case Studies</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#ooo">OOO</a></li>
+    <li><a href="#connect" class="nav-cta">Let's Talk →</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div id="hero">
+  <div class="hero-top fu">
+    <div class="hero-name-block">
+      <div class="hero-name">Libby<br>Vandal</div>
+      <div class="hero-descriptor">Building communities, experiences, & programs people want to be part of.</div>
+      <div style="font-size:16px; font-weight:400; color:#666; line-height:1.6; max-width:560px; margin-bottom:20px; letter-spacing:0;">Field marketer with 4+ years building ambassador programs, community initiatives, and experiential campaigns that turn grassroots engagement into measurable growth.</div>
+      <div class="hero-tags">
+        <span class="hero-tag">Field Marketing</span>
+        <span class="hero-tag">Community Building</span>
+        <span class="hero-tag">Experiential Marketing</span>
+      </div>
+      <div class="hero-cta-row">
+        <a href="Elizabeth Vandal Resume.pdf" download="Elizabeth Vandal Resume.pdf" class="btn-hero">Download Resume</a>
+        <a href="mailto:libbyvandal@gmail.com" class="btn-hero">Get In Touch</a>
+        <a href="https://www.linkedin.com/in/elizabethvandal/" target="_blank" class="btn-hero">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="hero-headline fu d1">
+    I build things<br>from the<br><em>ground up.</em>
+  </h1>
+
+  <div class="ticker-bar dk" style="margin-top:60px;margin-left:-48px;margin-right:-48px;">
+    <div class="ticker-track">
+      <span class="ticker-item">200+ Activations Executed</span>
+      <span class="ticker-item">40,000+ Leads Generated</span>
+      <span class="ticker-item">$900K+ Pipeline Influenced</span>
+      <span class="ticker-item">10+ Markets Activated</span>
+      <span class="ticker-item">30+ Ambassadors Managed</span>
+      <span class="ticker-item">Premier Lacrosse League</span>
+      <span class="ticker-item">National Ambassador Program</span>
+      <span class="ticker-item">200+ Activations Executed</span>
+      <span class="ticker-item">40,000+ Leads Generated</span>
+      <span class="ticker-item">$900K+ Pipeline Influenced</span>
+      <span class="ticker-item">10+ Markets Activated</span>
+      <span class="ticker-item">30+ Ambassadors Managed</span>
+      <span class="ticker-item">Premier Lacrosse League</span>
+      <span class="ticker-item">National Ambassador Program</span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+    <div class="label-xl fu">About Me</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="fu">Growing up with two entrepreneurial parents, I saw firsthand the hard work, resilience, and persistence it takes to turn an idea into something real. That mindset has shaped how I approach my own career. I love taking ownership, figuring things out, and building something from the ground up.</p>
+        <p class="fu d1">While studying at Marist University, I found myself drawn to the intersection of marketing, community, and live experiences. That interest led to opportunities like serving as an HBO Campus Brand Manager, where I learned how powerful it can be when people feel genuinely connected to a brand, an experience, or a community.</p>
+        <p class="fu d2">Since then, I've built my career around creating those connections. Whether it's launching a new program, growing an ambassador network, activating a new market, or bringing people together around a shared passion, I'm energized by turning ideas into something people actually want to be part of.</p>
+        <p class="fu d3">The work I'm most proud of isn't just the campaigns, events, or programs themselves. It's the systems, communities, and experiences behind them. I love building things that continue to grow long after they're launched.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise">
+  <div class="expertise-inner">
+    <div class="label-xl fu" style="padding-bottom:48px;color:var(--white);">Areas of Expertise</div>
+    <div class="expertise-grid">
+      <div class="expertise-item fu">Field Marketing</div>
+      <div class="expertise-item fu">Community Building</div>
+      <div class="expertise-item fu">Experiential Marketing</div>
+      <div class="expertise-item fu">Ambassador Programs</div>
+      <div class="expertise-item fu">Grassroots Marketing</div>
+      <div class="expertise-item fu">Partnerships</div>
+      <div class="expertise-item fu">Event Operations</div>
+      <div class="expertise-item fu">Lead Generation</div>
+      <div class="expertise-item fu">Project Management</div>
+      <div class="expertise-item fu">Team Leadership</div>
+      <div class="expertise-item fu">Fan Engagement</div>
+      <div class="expertise-item fu">Community Growth</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I'VE BUILT -->
+<section id="built">
+  <div class="built-inner">
+    <div class="label-xl fu">What I've Built</div>
+    <div class="section-title fu d1">Programs.<br>Systems.<br><em>Communities.</em></div>
+    <div class="built-list">
+      <div class="built-item fu">
+        <div class="built-title">National Ambassador Program</div>
+        <div>
+          <div class="built-desc">Created and scaled a national ambassador network, recruiting, training, and managing 30+ ambassadors across 10+ markets while building the systems and playbooks that enabled consistent grassroots execution nationwide.</div>
+        </div>
+      </div>
+      <div class="built-item fu">
+        <div class="built-title">Localized Grassroots Marketing Framework</div>
+        <div>
+          <div class="built-desc">Developed a scalable grassroots marketing model that connected professional sports with local communities through athlete appearances, community partnerships, youth engagement, and market-specific activations.</div>
+        </div>
+      </div>
+      <div class="built-item fu">
+        <div class="built-title">Community Engagement Programs</div>
+        <div>
+          <div class="built-desc">Built programs connecting athletes, fans, schools, hospitals, and youth organizations to create meaningful community touchpoints and strengthen relationships beyond game day.</div>
+        </div>
+      </div>
+      <div class="built-item fu">
+        <div class="built-title">Supporter Group Network</div>
+        <div>
+          <div class="built-desc">Helped grow local fan communities through watch parties, community events, and engagement initiatives, cultivating 150+ core advocates and 800+ engaged community members across multiple markets.</div>
+        </div>
+      </div>
+      <div class="built-item fu">
+        <div class="built-title">Experiential Marketing Programs</div>
+        <div>
+          <div class="built-desc">Planned and executed 200+ grassroots activations including athlete appearances, clinics, tournaments, school visits, watch parties, and community events designed to drive awareness and fan engagement.</div>
+        </div>
+      </div>
+      <div class="built-item fu">
+        <div class="built-title">Audience Growth & Lead Generation</div>
+        <div>
+          <div class="built-desc">Designed fan acquisition strategies that generated 40,000+ consumer leads and influenced $900K+ in pipeline, turning grassroots engagement into measurable business impact.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section id="impact">
+  <div class="impact-inner">
+    <div class="label-xl fu" style="color:var(--white);">Impact at a Glance</div>
+    <div class="impact-stats">
+      <div class="irow fu">
+        <div class="i-num"><span class="count" data-target="400000">0</span>+</div>
+        <div class="i-desc">
+          <div class="i-label">Consumer Leads Generated</div>
+          <div class="i-note">Through experiential campaigns and field activations</div>
+        </div>
+      </div>
+      <div class="irow fu">
+        <div class="i-num">$<span class="count" data-target="900">0</span>K+</div>
+        <div class="i-desc">
+          <div class="i-label">Pipeline Value Influenced</div>
+          <div class="i-note">Across programs, markets, and activations</div>
+        </div>
+      </div>
+      <div class="irow fu">
+        <div class="i-num"><span class="count" data-target="200">0</span>+</div>
+        <div class="i-desc">
+          <div class="i-label">Activations Executed</div>
+          <div class="i-note">Nationwide across all markets</div>
+        </div>
+      </div>
+      <div class="irow fu">
+        <div class="i-num"><span class="count" data-target="10">0</span>+</div>
+        <div class="i-desc">
+          <div class="i-label">U.S. Markets Activated</div>
+          <div class="i-note">Multi-market field marketing programs</div>
+        </div>
+      </div>
+      <div class="irow fu">
+        <div class="i-num"><span class="count" data-target="30">0</span>+</div>
+        <div class="i-desc">
+          <div class="i-label">Ambassadors Recruited & Managed</div>
+          <div class="i-note">National ambassador network built from scratch</div>
+        </div>
+      </div>
+      <div class="irow fu">
+        <div class="i-num"><span class="count" data-target="200">0</span>%</div>
+        <div class="i-desc">
+          <div class="i-label">YoY Growth in Activations</div>
+          <div class="i-note">Year-over-year scaling through improved systems</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER 2 -->
+<div class="ticker-bar lt">
+  <div class="ticker-track" style="animation-duration:28s;">
+    <span class="ticker-item">Field Marketing</span>
+    <span class="ticker-item">Ambassador Programs</span>
+    <span class="ticker-item">Community Building</span>
+    <span class="ticker-item">Experiential Marketing</span>
+    <span class="ticker-item">Growth Strategy</span>
+    <span class="ticker-item">Event Operations</span>
+    <span class="ticker-item">Lead Generation</span>
+    <span class="ticker-item">Brand Activation</span>
+    <span class="ticker-item">Field Marketing</span>
+    <span class="ticker-item">Ambassador Programs</span>
+    <span class="ticker-item">Community Building</span>
+    <span class="ticker-item">Experiential Marketing</span>
+    <span class="ticker-item">Growth Strategy</span>
+    <span class="ticker-item">Event Operations</span>
+    <span class="ticker-item">Lead Generation</span>
+    <span class="ticker-item">Brand Activation</span>
+  </div>
+</div>
+
+<!-- FEATURED WORK -->
+<section id="work">
+  <div class="work-inner">
+    <div class="label-xl fu">Featured Work</div>
+    <div class="section-title fu d1">Case Studies</div>
+    <div class="cs-list">
+
+      <div class="cs fu">
+        <div class="cs-top">
+          <div class="cs-head">
+            <div class="cs-title">Building the PLL's First National Ambassador Program</div>
+          </div>
+        </div>
+        <div class="cs-body">
+          <div class="cs-detail"><h4>Challenge</h4><p>As the PLL expanded into homecoming markets, we needed a way to create a consistent grassroots presence beyond game weekends. We had passionate fans across the country, but no formal structure to activate them locally, build community, or extend our marketing efforts.</p></div>
+          <div class="cs-detail"><h4>Strategy</h4><p>I helped create and scale the league's first national ambassador program, focused on empowering passionate fans, students, and community members to serve as local representatives who could drive awareness, support grassroots initiatives, generate leads, and create meaningful connections within their communities.</p></div>
+          <div class="cs-detail"><h4>Execution</h4><p>I recruited, onboarded, trained, and managed ambassadors across more than 10 markets while developing the playbooks, communication systems, reporting processes, and activation strategies that enabled consistent execution nationwide. Ambassadors supported events, community engagement, lead generation, and local market initiatives throughout the season.</p></div>
+          <div class="cs-detail"><h4>Impact</h4><p>What started as a new initiative became a foundational part of the league's grassroots strategy. The program created scalable local market presence, expanded community engagement efforts, and generated measurable business impact through lead generation and fan acquisition.</p></div>
+        </div>
+        <div class="cs-results">
+          <div class="rstat"><div class="rn">30+</div><div class="rl">Ambassadors Recruited, Onboarded & Managed</div></div>
+          <div class="rstat"><div class="rn">10+</div><div class="rl">Markets Activated</div></div>
+          <div class="rstat"><div class="rn">40,000+</div><div class="rl">Leads Generated</div></div>
+          <div class="rstat"><div class="rn">$900K+</div><div class="rl">Pipeline Influenced</div></div>
+        </div>
+      </div>
+
+      <div class="cs fu d1">
+        <div class="cs-top">
+          <div class="cs-head">
+            <div class="cs-title">Making a National Brand Feel Local</div>
+          </div>
+        </div>
+        <div class="cs-body">
+          <div class="cs-detail"><h4>Challenge</h4><p>As the PLL expanded into homecoming markets, one of the biggest challenges was creating local relevance ahead of each market weekend. The league operated nationally, but fans connect locally. We needed to introduce the PLL to new audiences and create excitement leading into game weekends.</p></div>
+          <div class="cs-detail"><h4>Strategy</h4><p>I helped develop and execute a localized grassroots marketing framework designed to connect professional lacrosse with communities through athlete appearances, school visits, community events, local partnerships, earned media opportunities, and social storytelling to make each market weekend feel like a local event rather than a traveling sports property.</p></div>
+          <div class="cs-detail"><h4>Execution</h4><p>Working across multiple markets, I coordinated and executed community-focused activations that brought players, teams, and the league directly into local communities through youth clinics, school visits, hospital appearances, media opportunities, community partnerships, and fan engagement events designed to build awareness and create meaningful local connections before game weekend.</p></div>
+          <div class="cs-detail"><h4>Impact</h4><p>By combining community engagement, earned media, and social amplification, these efforts helped increase awareness, expand reach, and strengthen connections between the league and local communities ahead of market weekends.</p></div>
+        </div>
+        <div class="cs-results">
+          <div class="rstat"><div class="rn">10+</div><div class="rl">Markets Activated</div></div>
+          <div class="rstat"><div class="rn">5,000+</div><div class="rl">Fan Touchpoints</div></div>
+          <div class="rstat"><div class="rn">192</div><div class="rl">Media Hits</div></div>
+          <div class="rstat"><div class="rn">295K+</div><div class="rl">Social Views</div></div>
+        </div>
+      </div>
+
+      <div class="cs fu d2">
+        <div class="cs-top">
+          <div class="cs-head">
+            <div class="cs-title">Building Supporter Communities Beyond Game Day</div>
+          </div>
+        </div>
+        <div class="cs-body">
+          <div class="cs-detail"><h4>Challenge</h4><p>PLL fans were passionate about the league, but many experienced that fandom in isolation. Outside of game weekends, there were limited opportunities for supporters to connect with one another, build relationships, or engage with the league at a local level.</p></div>
+          <div class="cs-detail"><h4>Strategy</h4><p>I helped develop a supporter group model focused on creating community-driven experiences that brought fans together throughout the season, turning casual supporters into engaged advocates by creating opportunities for connection, conversation, and shared experiences within their local markets.</p></div>
+          <div class="cs-detail"><h4>Execution</h4><p>Working alongside supporter leaders and engaged fans, I helped launch and grow supporter communities across multiple markets. Programming included watch parties, community events, local meetups, exclusive experiences, and ongoing communication designed to keep fans engaged between game weekends.</p></div>
+          <div class="cs-detail"><h4>Impact</h4><p>The program transformed individual fans into connected communities of advocates who actively promoted the league, welcomed new supporters, and helped strengthen the PLL's presence within their local markets.</p></div>
+        </div>
+        <div class="cs-results">
+          <div class="rstat"><div class="rn">9</div><div class="rl">Markets Launched</div></div>
+          <div class="rstat"><div class="rn">150+</div><div class="rl">Core Advocates</div></div>
+          <div class="rstat"><div class="rn">800+</div><div class="rl">Community Members</div></div>
+          <div class="rstat"><div class="rn">Year-Round</div><div class="rl">Community Engagement</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="gallery-inner">
+    <div class="gallery-hdr">
+      <div class="label-xl fu" style="color:var(--white);">In the Field</div>
+    </div>
+    <div class="ig-grid">
+      <div class="gitem"><div class="gitem-inner"><img src="activation-1.jpg" alt="PLL Activation"></div></div>
+      <div class="gitem"><div class="gitem-inner"><img src="activation-2.jpeg" alt="Denver Outlaws Activation"></div></div>
+      <div class="gitem"><div class="gitem-inner"><img src="photo-3.jpeg" alt="Activation"></div></div>
+      <div class="gitem"><div class="gitem-inner"><img src="photo-4.jpeg" alt="Activation"></div></div>
+      <div class="gitem"><div class="gitem-inner"><img src="photo-5.jpeg" alt="Activation"></div></div>
+      <div class="gitem"><div class="gitem-inner"><img src="photo-6.jpeg" alt="Activation"></div></div>
+      <div class="gitem"><div class="gitem-inner"><img src="photo-7.jpeg" alt="Activation"></div></div>
+      <div class="gitem"><div class="gitem-inner"><img src="photo-8.jpeg" alt="Activation"></div></div>
+      <div class="gitem"><div class="gitem-inner"><img src="photo-9.jpeg" alt="Activation"></div></div>
+      <div class="gitem"><div class="gitem-inner"><img src="photo-10.jpeg" alt="Activation"></div></div>
+      <div class="gitem"><div class="gitem-inner"><img src="photo-11 2.jpeg" alt="Activation"></div></div>
+      <div class="gitem"><div class="gitem-inner"><img src="photo-12 2.jpeg" alt="Activation"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume">
+  <div class="resume-inner">
+    <div class="resume-top">
+      <div>
+        <div class="label-xl fu" style="color:var(--white);">Resume</div>
+      </div>
+      <a href="Elizabeth Vandal Resume.pdf" download="Elizabeth Vandal Resume.pdf" class="dl-btn fu d1">↓ Download Resume</a>
+    </div>
+    <div class="resume-cols">
+      <div>
+        <div class="rs-label">Professional Summary</div>
+        <div class="exp-item fu">
+          <p style="font-size:15px;line-height:1.75;color:rgba(255,255,255,.55);">Field marketing professional with 4+ years of experience executing ambassador programs, community initiatives, and experiential activations across 10+ U.S. markets. Proven track record managing cross-functional partnerships, coordinating large-scale events, and driving measurable results, including 40,000+ consumer leads and 200% year-over-year activation growth.</p>
+        </div>
+
+        <div class="rs-label" style="margin-top:48px;">Professional Experience</div>
+
+        <div class="exp-item fu">
+          <div class="exp-top">
+            <div class="exp-role">Grassroots Marketing Associate</div>
+            <div class="exp-date">April 2022 – Present</div>
+          </div>
+          <div class="exp-co">Premier Lacrosse League (PLL) · Remote</div>
+          <ul class="exp-list">
+            <li>Owned execution and operational coordination of grassroots marketing initiatives across 10+ U.S. markets, partnering directly with the Director of Growth Marketing on strategy, budgeting, and program delivery using Asana for cross-functional project tracking.</li>
+            <li>Conceived, launched, and scaled the organization's first national ambassador program, recruiting, onboarding, and coaching a 30+ member field marketing team of college and university students across 10+ U.S. markets, developing the operational infrastructure, activation playbooks, and performance standards that supported nationwide execution.</li>
+            <li>Directed 200+ experiential activations nationwide, partnering with sales teams, local market stakeholders, and brand ambassadors to drive 200% YoY growth and generate 40,000+ consumer leads valued at $900K+.</li>
+            <li>Developed and launched a localized grassroots marketing framework across nine markets, partnering with social and content teams to amplify athlete appearances, community partnerships, earned media opportunities, and local events that increased brand awareness and fan engagement in priority markets.</li>
+            <li>Launched and scaled the league's Supporter Groups program, growing 150+ core advocates and 800+ engaged members through community programming and CRM-driven engagement; coordinated budgeting, logistics, and on-site execution for the annual Supporter Summit.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item fu">
+          <div class="exp-top">
+            <div class="exp-role">Student Marketing Coordinator</div>
+            <div class="exp-date">Aug 2019 – May 2023</div>
+          </div>
+          <div class="exp-co">Marist University · Poughkeepsie, NY</div>
+          <ul class="exp-list">
+            <li>Drove 1M+ TikTok views and 25% follower growth in one week through trend-driven content strategy; managed multi-platform social content across Instagram, Facebook, LinkedIn, and X to strengthen brand awareness and student/campus engagement.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item fu">
+          <div class="exp-top">
+            <div class="exp-role">Campus Brand Manager</div>
+            <div class="exp-date">Aug 2021 – May 2023</div>
+          </div>
+          <div class="exp-co">HBO Max · Remote</div>
+          <ul class="exp-list">
+            <li>Planned and executed on-campus experiential activations and brand ambassador campaigns for HBO Max, coordinating event logistics and on-site execution to drive consumer awareness and student engagement.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item fu">
+          <div class="exp-top">
+            <div class="exp-role">Athlete Management Intern</div>
+            <div class="exp-date">April 2021 – June 2023</div>
+          </div>
+          <div class="exp-co">Athlete Relations · Remote</div>
+          <ul class="exp-list">
+            <li>Coordinated scheduling, travel, appearances, camps, charity initiatives, and brand partnerships for Athlete Relations clients; developed pitch materials to secure new collaboration and activation opportunities.</li>
+          </ul>
+        </div>
+
+        <div class="rs-label" style="margin-top:48px;">Education</div>
+        <div class="exp-item fu">
+          <div class="exp-top">
+            <div class="exp-role">Bachelor of Arts, Communications</div>
+            <div class="exp-date">Aug 2019 – May 2023</div>
+          </div>
+          <div class="exp-co">Marist University</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECT -->
+<!-- OOO -->
+<section id="ooo" style="background:var(--white);padding:100px 48px;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="label-xl fu" style="margin-bottom:48px;">OOO</div>
+    <div style="max-width:720px;">
+      <p class="fu" style="font-size:18px;line-height:1.78;color:#555;margin-bottom:24px;">When I'm not working, I'm usually exploring Nashville with my boyfriend, planning a trip that's still months away, or finding another project to tackle around our condo. I'm always looking for hidden gems, whether that's a local restaurant, a neighborhood event, or a spot most people drive right past.</p>
+      <p class="fu d1" style="font-size:18px;line-height:1.78;color:#555;">At home, you'll find me hanging out with Guy, my cat and frequent work-from-home companion, or getting completely invested in a docuseries I'll inevitably finish in one weekend.</p>
+    </div>
+  </div>
+</section>
+
+<section id="connect">
+  <div class="connect-inner">
+    <div class="connect-title fu">Let's create<br>something<br><em>unforgettable.</em></div>
+    <div class="connect-right fu d1">
+      <p class="connect-sub">I'm open to Field Marketing Manager, Experiential Marketing, Community Marketing, and Growth Marketing roles. If you're building something people will love, let's talk.</p>
+      <div class="connect-ctas">
+        <a href="mailto:libbyvandal@gmail.com" class="btn-dark">Send a Message</a>
+        <a href="https://linkedin.com/in/libbyvandal" target="_blank" class="btn-outline">LinkedIn →</a>
+      </div>
+      <div class="connect-detail">
+        <a href="mailto:libbyvandal@gmail.com">libbyvandal@gmail.com</a>
+        &nbsp;·&nbsp; Nashville, TN · Open to Travel
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="f-name">Libby Vandal</div>
+      <div class="f-tag">Field & Experiential Marketing · Nashville, TN</div>
+    </div>
+    <div class="f-script">experiences that connect.</div>
+    <div class="f-links">
+      <a href="mailto:libbyvandal@gmail.com">libbyvandal@gmail.com</a>
+      <a href="https://linkedin.com/in/libbyvandal" target="_blank">linkedin.com/in/libbyvandal</a>
+      <a href="#">Nashville, TN · Open to Travel</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* Nav scroll + active link */
+  const nav = document.getElementById('mainNav');
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  const sections = [...navLinks].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+  function updateNav() {
+    nav.classList.toggle('scrolled', scrollY > 10);
+    let current = '';
+    sections.forEach(sec => { if (scrollY >= sec.offsetTop - 80) current = '#' + sec.id; });
+    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === current));
+  }
+  window.addEventListener('scroll', updateNav, {passive:true});
+  updateNav();
+
+  /* Counter animation */
+  const counterIO = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !e.target.dataset.done) {
+        e.target.dataset.done = '1';
+        const target = parseInt(e.target.dataset.target);
+        const duration = 2000;
+        const start = performance.now();
+        function step(now) {
+          const p = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          const val = Math.round(target * eased);
+          e.target.textContent = val >= 1000 ? val.toLocaleString() : val;
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('.count[data-target]').forEach(el => counterIO.observe(el));
+
+  /* Fade up */
+  const io = new IntersectionObserver(entries =>
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); }),
+    {threshold:.1, rootMargin:'0px 0px -40px 0px'}
+  );
+  document.querySelectorAll('.fu').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
